@@ -10,7 +10,7 @@ def scheduler():
     INTERVAL = 30.0
     next_run = time.monotonic()
     count = 0
-
+    print(os.environ.get("RABBITMQ_HOST"))
     while True:
         now = time.time()
         now_str = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(now))
